@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Docker-cheat-sheet : my personal docker cheat sheet">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Docker-cheat-sheet</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/wikier/docker-cheat-sheet">View on GitHub</a>
+
+          <h1 id="project_title">Docker-cheat-sheet</h1>
+          <h2 id="project_tagline">my personal docker cheat sheet</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/wikier/docker-cheat-sheet/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/wikier/docker-cheat-sheet/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="my-personal-docker-cheat-sheet" class="anchor" href="#my-personal-docker-cheat-sheet" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>My personal Docker cheat sheet</h1>
+
+<p>Docker Engine is <a href="https://docs.docker.com/engine/reference/commandline/">plenty of commands</a>. 
+There are more detailed cheat sheets out there (e.g., <a href="https://github.com/wsargent/docker-cheat-sheet">this one</a>);
+here I just try to put together some useful commands/tips I usually need.</p>
+
+<h2>
+<a id="list-running-containers" class="anchor" href="#list-running-containers" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>List running containers</h2>
+
+<pre><code>docker ps
+</code></pre>
+
+<p>(appending <code>-a</code> lists all)</p>
+
+<h2>
+<a id="commit-current-version-of-the-container" class="anchor" href="#commit-current-version-of-the-container" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Commit current version of the container</h2>
+
+<pre><code>docker commit CONTAINER_ID pipeline
+</code></pre>
+
+<h2>
+<a id="stop-a-container" class="anchor" href="#stop-a-container" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Stop a container</h2>
+
+<pre><code>docker stop CONTAINER_ID
+</code></pre>
+
+<h2>
+<a id="remove-a-container" class="anchor" href="#remove-a-container" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Remove a container</h2>
+
+<pre><code>docker rm CONTAINER_ID
+</code></pre>
+
+<h2>
+<a id="remove-all-containers" class="anchor" href="#remove-all-containers" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Remove all containers</h2>
+
+<pre><code>docker rm $(docker ps -a -q)
+</code></pre>
+
+<h2>
+<a id="list-images" class="anchor" href="#list-images" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>List images</h2>
+
+<pre><code>docker images --tree
+</code></pre>
+
+<h2>
+<a id="remove-an-image" class="anchor" href="#remove-an-image" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Remove an image</h2>
+
+<pre><code>docker rmi IMAGE_ID
+</code></pre>
+
+<h2>
+<a id="remove-non-labelled-images" class="anchor" href="#remove-non-labelled-images" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Remove non-labelled images</h2>
+
+<pre><code>docker rmi $(docker images -q --filter "dangling=true")
+</code></pre>
+
+<h2>
+<a id="remove-all-images" class="anchor" href="#remove-all-images" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Remove all images</h2>
+
+<pre><code>docker rmi $(docker images -q)`
+</code></pre>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Docker-cheat-sheet maintained by <a href="https://github.com/wikier">wikier</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
