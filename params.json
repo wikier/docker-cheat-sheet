@@ -1,6 +1,0 @@
-{
-  "name": "Docker-cheat-sheet",
-  "tagline": "my personal docker cheat sheet",
-  "body": "# My personal Docker cheat sheet\r\n\r\nDocker Engine is [plenty of commands](https://docs.docker.com/engine/reference/commandline/). \r\nThere are more detailed cheat sheets out there (e.g., [this one](https://github.com/wsargent/docker-cheat-sheet));\r\nhere I just try to put together some useful commands/tips I usually need.\r\n",
-  "note": "Don't delete this file! It's used internally to help with page regeneration."
-}
