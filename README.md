@@ -12,32 +12,32 @@ here I just try to put together some useful commands/tips I usually need.
 
 ## Commit current version of the container
 
-   docker commit CONTAINER_ID pipeline
+    docker commit CONTAINER_ID pipeline
 
 ## Stop a container
 
-   docker stop CONTAINER_ID
+    docker stop CONTAINER_ID
 
 ## Remove a container
 
-   docker rm CONTAINER_ID
+    docker rm CONTAINER_ID
 
 ## Remove all containers
 
-   docker rm $(docker ps -a -q)
+    docker rm $(docker ps -a -q)
 
 ## List images
 
-   docker images --tree
+    docker images --tree
 
 ## Remove an image
 
-   docker rmi IMAGE_ID
+    docker rmi IMAGE_ID
 
 ## Remove non-labelled images
 
-   docker rmi $(docker images -q --filter "dangling=true")
+    docker rmi $(docker images -q --filter "dangling=true")
 
 ## Remove all images
 
-   docker rmi $(docker images -q)`
+    docker rmi $(docker images -q)`
