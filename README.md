@@ -12,7 +12,7 @@ here I just try to put together some useful commands/tips I usually need.
 
 ## Commit current version of the container
 
-    docker commit CONTAINER_ID pipeline
+    docker commit CONTAINER_ID TAG
 
 ## Stop a container
 
