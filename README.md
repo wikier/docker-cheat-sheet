@@ -40,4 +40,4 @@ here I just try to put together some useful commands/tips I usually need.
 
 ## Remove all images
 
-    docker rmi $(docker images -q)`
+    docker rmi $(docker images -q)
